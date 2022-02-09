@@ -30,6 +30,10 @@ void setup() {
   Serial.begin(9600);
   myservo.attach(2);                  // attaches the servo on pin 2 to the servo object
 
+  wifiConnect();                  //Branchement au réseau WIFI
+  MQTTConnect();                  //Branchement au broker MQTT
+
+
   //Initialisation des broches
   pinMode(analogInPin, INPUT);
 
